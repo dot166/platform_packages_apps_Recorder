@@ -18,7 +18,6 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
@@ -35,6 +34,7 @@ import androidx.recyclerview.selection.StorageStrategy
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import io.github.dot166.jLib.app.jActivity
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.lineageos.recorder.ext.scheduleShowSoftInput
@@ -45,7 +45,7 @@ import org.lineageos.recorder.models.Recording
 import org.lineageos.recorder.utils.RecordIntentHelper
 import org.lineageos.recorder.viewmodels.RecordingsViewModel
 
-class ListActivity : AppCompatActivity() {
+class ListActivity : jActivity() {
     // View models
     private val model: RecordingsViewModel by viewModels()
 
