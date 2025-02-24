@@ -166,9 +166,6 @@ class ListActivity : jActivity() {
 
         setContentView(R.layout.activity_list)
 
-        // Setup edge-to-edge
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-
         setSupportActionBar(toolbar)
         supportActionBar?.let {
             it.setDisplayShowHomeEnabled(true)
@@ -177,18 +174,6 @@ class ListActivity : jActivity() {
 
         listRecyclerView.layoutManager = LinearLayoutManager(this)
         listRecyclerView.adapter = recordingsAdapter
-
-        ViewCompat.setOnApplyWindowInsetsListener(contentView) { _, windowInsets ->
-            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-
-            listRecyclerView.updatePadding(
-                bottom = insets.bottom,
-                left = insets.left,
-                right = insets.right,
-            )
-
-            windowInsets
-        }
 
         selectionTracker = SelectionTracker.Builder(
             "recordings",
