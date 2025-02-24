@@ -71,6 +71,9 @@ dependencies {
     // Recyclerview
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+
+    // jLib
+    implementation("io.github.dot166:j-Lib:4.0.5")
 }
 
 configure<GenerateBpPluginExtension> {
@@ -78,6 +81,7 @@ configure<GenerateBpPluginExtension> {
     minSdk.set(android.defaultConfig.minSdk!!)
     availableInAOSP.set { module: Module ->
         when {
+            module.group == "io.github.dot166" -> true
             module.group.startsWith("androidx") -> true
             module.group.startsWith("org.jetbrains") -> true
             module.group == "com.google.android.material" -> true
