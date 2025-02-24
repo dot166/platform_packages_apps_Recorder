@@ -28,16 +28,12 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
-import androidx.core.view.updatePadding
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import io.github.dot166.jLib.app.jActivity
 import kotlinx.coroutines.launch
 import org.lineageos.recorder.models.UiStatus
 import org.lineageos.recorder.service.SoundRecorderService
@@ -55,7 +51,7 @@ import java.time.temporal.ChronoUnit
 import java.util.Locale
 import kotlin.reflect.safeCast
 
-class RecorderActivity : AppCompatActivity(R.layout.activity_main) {
+class RecorderActivity : jActivity(R.layout.activity_main) {
     // View models
     private val model: RecordingsViewModel by viewModels()
 
@@ -129,23 +125,10 @@ class RecorderActivity : AppCompatActivity(R.layout.activity_main) {
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Setup edge-to-edge
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-
         floatingActionButton.setOnClickListener { toggleSoundRecorder() }
         pauseResumeImageView.setOnClickListener { togglePause() }
         openSoundListImageView.setOnClickListener { openList() }
         settingsImageView.setOnClickListener { openSettings() }
-
-        ViewCompat.setOnApplyWindowInsetsListener(contentView) { _, windowInsets ->
-            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-
-            contentView.updatePadding(
-                bottom = insets.bottom,
-            )
-
-            windowInsets
-        }
 
         if (MediaStore.Audio.Media.RECORD_SOUND_ACTION == intent.action) {
             returnAudio = true
