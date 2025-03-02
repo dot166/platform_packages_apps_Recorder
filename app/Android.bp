@@ -44,8 +44,6 @@ android_app {
         "androidx.recyclerview_recyclerview",
         "androidx.recyclerview_recyclerview-selection",
         "com.google.android.material_material",
-        "Recorder_com.mikepenz_aboutlibraries-compose-m3-android",
-        "Recorder_com.mikepenz_aboutlibraries-core-android",
         "j.Lib",
         "kotlin-stdlib",
     ],
