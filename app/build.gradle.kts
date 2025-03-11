@@ -83,6 +83,10 @@ configure<GenerateBpPluginExtension> {
         when {
             module.group == "io.github.dot166" -> true
             module.group.startsWith("androidx") -> true
+            module.group.startsWith("org.jetbrains.compose") -> false
+            module.name.startsWith("atomicfu") -> false
+            module.name.startsWith("kotlinx-collections-immutable") -> false
+            module.group.startsWith("org.jetbrains.androidx") -> false
             module.group.startsWith("org.jetbrains") -> true
             module.group == "com.google.android.material" -> true
             module.group == "com.google.errorprone" -> true
