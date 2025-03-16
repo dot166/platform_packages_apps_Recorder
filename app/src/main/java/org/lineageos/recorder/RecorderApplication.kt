@@ -5,8 +5,8 @@
 
 package org.lineageos.recorder
 
-import io.github.dot166.jLib.ThemeEngine.ThemeEngine.setCustomThemeClass
-import io.github.dot166.jLib.app.jLIBCoreApp
+import io.github.dot166.jlib.themeengine.ThemeEngine.setCustomThemeClass
+import io.github.dot166.jlib.app.jLIBCoreApp
 import io.github.dot166.recorder.themes
 
 class RecorderApplication : jLIBCoreApp() {

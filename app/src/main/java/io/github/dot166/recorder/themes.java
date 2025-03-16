@@ -7,7 +7,7 @@ import androidx.compose.material3.Typography;
 
 import org.lineageos.recorder.R;
 
-import io.github.dot166.jLib.ThemeEngine.values;
+import io.github.dot166.jlib.themeengine.values;
 
 public class themes implements values {
     @Override

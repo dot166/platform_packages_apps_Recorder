@@ -34,7 +34,7 @@ import androidx.recyclerview.selection.StorageStrategy
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import io.github.dot166.jLib.app.jActivity
+import io.github.dot166.jlib.app.jActivity
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.lineageos.recorder.ext.scheduleShowSoftInput
