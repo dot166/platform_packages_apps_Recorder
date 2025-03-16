@@ -33,7 +33,7 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import io.github.dot166.jLib.app.jActivity
+import io.github.dot166.jlib.app.jActivity
 import kotlinx.coroutines.launch
 import org.lineageos.recorder.models.UiStatus
 import org.lineageos.recorder.service.SoundRecorderService
