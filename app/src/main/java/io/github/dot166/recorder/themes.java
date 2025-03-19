@@ -2,8 +2,10 @@ package io.github.dot166.recorder;
 
 import android.content.Context;
 
+import androidx.annotation.Nullable;
 import androidx.compose.material3.Shapes;
 import androidx.compose.material3.Typography;
+import androidx.compose.runtime.Composer;
 
 import org.lineageos.recorder.R;
 
@@ -20,13 +22,15 @@ public class themes implements values {
         return R.style.AppTheme;
     }
 
+    @Nullable
     @Override
-    public Typography ComposeTypography(Context context) {
+    public Typography composeTypography(@Nullable Context context, @Nullable Composer composer, int i) {
         return null;
     }
 
+    @Nullable
     @Override
-    public Shapes ComposeShapes(Context context) {
+    public Shapes composeShapes(@Nullable Context context, @Nullable Composer composer, int i) {
         return null;
     }
 }
