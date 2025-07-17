@@ -8,7 +8,7 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-        maven("https://raw.githubusercontent.com/dot166/gradle-generatebp/v1.21.1/.m2")
+        maven("https://raw.githubusercontent.com/dot166/gradle-generatebp/v1.25.1/.m2")
     }
 }
 
