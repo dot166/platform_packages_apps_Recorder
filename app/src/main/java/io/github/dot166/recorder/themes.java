@@ -18,6 +18,11 @@ public class themes implements values {
     }
 
     @Override
+    public int jLibClassicTheme() {
+        return R.style.jAppClassicTheme;
+    }
+
+    @Override
     public int M3() {
         return R.style.AppTheme;
     }
