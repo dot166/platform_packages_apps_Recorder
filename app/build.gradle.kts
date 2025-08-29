@@ -73,7 +73,7 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
 
     // jLib
-    implementation("io.github.dot166:j-Lib:4.2.27")
+    implementation("io.github.dot166:j-Lib:+")
 }
 
 configure<GenerateBpPluginExtension> {
