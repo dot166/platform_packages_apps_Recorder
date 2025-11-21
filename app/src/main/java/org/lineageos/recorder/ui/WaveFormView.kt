@@ -77,7 +77,7 @@ class WaveFormView @JvmOverloads constructor(
         )
 
         wavesColor = MaterialColors.getColor(
-            this, com.google.android.material.R.attr.colorAccent
+            this, com.google.android.material.R.attr.colorSecondary
         )
 
         paint = Paint()
